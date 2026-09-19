@@ -27,16 +27,7 @@ function Header() {
           </a>
           <a
             onClick={() => {
-              scroll("product");
-              setChoose("product")
-            }}
-            className={choose === "product" ? "active" : ""}
-          >
-            Produk
-          </a>
-          <a
-            onClick={() => {
-              scroll("testi");
+              scroll("kontak");
               setChoose("testi")
             }}
             className={choose === "testi" ? "active" : ""}
@@ -56,11 +47,12 @@ function Header() {
         <div className="nav-right">
           <a
             onClick={() => {
-              toWhatsapp("6285823023823");
+              toWhatsapp("085396592892");
             }}
             className="btn btn-primary"
+            id="action-btn-shoop"
           >
-            Belanja Sekarang
+            Chat admin
           </a>
           <button
             className="hamburger"
@@ -79,10 +71,8 @@ function Header() {
         <a href="#beranda" className="active">
           Beranda
         </a>
-        <a href="#produk">Produk</a>
         <a href="#tentang">Tentang Kami</a>
         <a href="#kontak">Kontak</a>
-        <a href="#akun">Akun Saya</a>
       </div>
     </header>
   );

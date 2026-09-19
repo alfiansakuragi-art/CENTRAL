@@ -82,7 +82,7 @@ button {
     padding: 13px 28px;
     border-radius: 999px;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 10px;
     letter-spacing: .2px;
     transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
     white-space: nowrap;
@@ -332,6 +332,7 @@ header {
 .hero-dots {
     display: flex;
     gap: 8px;
+    margin: 10px 0;
 }
 
 .hero-dots span {
@@ -353,6 +354,7 @@ header {
     align-items: center;
     justify-content: center;
     min-height: 340px;
+    overflow-y: scroll;
 }
 
 .podium-row {
@@ -879,3 +881,17 @@ footer {
         font-size: 13px;
     }
 }
+
+
+
+@media(max-width: 480px) {
+
+
+
+    #action-btn-shoop {
+        display: none;
+    }
+}
+
+
+

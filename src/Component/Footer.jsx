@@ -27,17 +27,9 @@ function Footer() {
             <button className="btn btn-primary">HUBUNGI KAMI</button>
           </div>
           <div className="footer-col">
-            <h5>Saya mau belanja tapi tunggu discount saja min</h5>
-            <p>kami juga menyediakan display discount yang sedang berjalan dibawah ini ya</p>
-            <button className="btn btn-primary">Cek Promo</button>
-            <p>atau sahabat central bisa tanya langsung ke admin newcentral</p>
-            <button className="btn">Chat Mimin</button>
-          </div>
-
-          <div className="footer-col">
-            <h5>Bisa ga sih bayar QRIS/TRANSFER ?</h5>
+            <h5>Bisa kah kalo pake QRIS?</h5>
             <p>Bisa ya, sahabat central</p>
-            <p>dengan ketentuan minimal belanja 50k..</p>
+            <p>dengan ketentuan minimal belanja 50k.. untuk offline Cashier</p>
           </div>
 
           <div className="footer-col" id="akun">

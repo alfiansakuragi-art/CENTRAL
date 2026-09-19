@@ -1,6 +1,7 @@
 function Category() {
   return (
     <section className="section">
+      <h1 className="section-title">Menyediakan:</h1>
       <div className="container">
         <div className="kategori-grid">
           <div className="kategori-card">
