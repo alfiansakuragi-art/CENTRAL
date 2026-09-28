@@ -634,6 +634,272 @@ header {
     background: var(--rose-600);
 }
 
+/* ===== Brand Section ===== */
+.brand-section {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--blush-50) 100%);
+    position: relative;
+}
+
+.brand-header {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.brand-subtitle {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-top: -20px;
+    margin-bottom: 28px;
+}
+
+.brand-search-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-search-box {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    display: flex;
+    align-items: center;
+}
+
+.brand-search-icon {
+    position: absolute;
+    left: 18px;
+    width: 18px;
+    height: 18px;
+    stroke: var(--rose-600);
+    pointer-events: none;
+}
+
+.brand-search-input {
+    width: 100%;
+    padding: 14px 44px 14px 48px;
+    font-size: 14.5px;
+    font-family: inherit;
+    color: var(--ink);
+    background: #fff;
+    border: 1.5px solid rgba(176, 48, 79, 0.16);
+    border-radius: 999px;
+    box-shadow: 0 4px 18px rgba(122, 31, 56, 0.06);
+    outline: none;
+    transition: border-color .25s ease, box-shadow .25s ease;
+}
+
+.brand-search-input:focus {
+    border-color: var(--rose-600);
+    box-shadow: 0 6px 22px rgba(176, 48, 79, 0.14);
+}
+
+.brand-search-input::placeholder {
+    color: var(--muted);
+    opacity: 0.75;
+}
+
+.brand-clear-btn {
+    position: absolute;
+    right: 14px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(176, 48, 79, 0.1);
+    color: var(--rose-700);
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    transition: background .2s ease;
+}
+
+.brand-clear-btn:hover {
+    background: rgba(176, 48, 79, 0.2);
+}
+
+.brand-count-badge span {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--rose-700);
+    background: rgba(176, 48, 79, 0.08);
+}
+
+.brand-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.brand-card {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(176, 48, 79, 0.06);
+    padding: 22px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.brand-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rose-500), var(--gold-500));
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-soft);
+    border-color: rgba(176, 48, 79, 0.2);
+}
+
+.brand-card:hover::before {
+    opacity: 1;
+}
+
+.brand-card-top {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 14px;
+}
+
+.brand-tier-badge {
+    padding: 4px 10px;
+    background: linear-gradient(135deg, rgba(201, 151, 79, 0.15), rgba(231, 201, 138, 0.25));
+    color: var(--rose-950);
+    border: 1px solid rgba(201, 151, 79, 0.35);
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+}
+
+.brand-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    margin-bottom: 18px;
+}
+
+.brand-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--blush-100), #fce6ec);
+    color: var(--rose-700);
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 2px 4px rgba(122, 31, 56, 0.08);
+    margin-bottom: 6px;
+    transition: transform .3s ease;
+}
+
+.brand-card:hover .brand-avatar {
+    transform: scale(1.08);
+}
+
+.brand-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.25;
+}
+
+.brand-category {
+    font-size: 12.5px;
+    color: var(--muted);
+    font-weight: 500;
+}
+
+.brand-card-footer {
+    border-top: 1px solid rgba(176, 48, 79, 0.08);
+    padding-top: 14px;
+    display: flex;
+    justify-content: center;
+}
+
+.brand-explore-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--rose-600);
+    transition: gap .2s ease, color .2s ease;
+}
+
+.brand-explore-link svg {
+    width: 14px;
+    height: 14px;
+    transition: transform .2s ease;
+}
+
+.brand-card:hover .brand-explore-link {
+    color: var(--rose-700);
+    gap: 9px;
+}
+
+.brand-card:hover .brand-explore-link svg {
+    transform: translateX(3px);
+}
+
+.brand-empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+.brand-empty-icon {
+    font-size: 38px;
+    margin-bottom: 12px;
+}
+
+.brand-empty-state h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--rose-800);
+    margin-bottom: 8px;
+}
+
+.brand-empty-state p {
+    font-size: 13.5px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
 /* ===== Footer ===== */
 footer {
     background: linear-gradient(160deg, var(--rose-800), var(--rose-950));
@@ -805,7 +1071,8 @@ footer {
 @media (max-width:1024px) {
 
     .kategori-grid,
-    .produk-grid {
+    .produk-grid,
+    .brand-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -860,6 +1127,11 @@ footer {
     .kategori-grid,
     .produk-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .brand-grid {
+        grid-template-columns: 1fr;
         gap: 14px;
     }
 

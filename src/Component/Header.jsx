@@ -27,21 +27,21 @@ function Header() {
           </a>
           <a
             onClick={() => {
+              scroll("brand");
+              setChoose("brand")
+            }}
+            className={choose === "brand" ? "active" : ""}
+          >
+            Cek brand
+          </a>
+          <a
+            onClick={() => {
               scroll("kontak");
               setChoose("testi")
             }}
             className={choose === "testi" ? "active" : ""}
           >
             Tentang Kami
-          </a>
-          <a
-            onClick={() => {
-              scroll("kontak");
-              setChoose("kontak")
-            }}
-            className={choose === "kontak" ? "active" : ""}
-          >
-            Kontak
           </a>
         </nav>
         <div className="nav-right">
@@ -71,8 +71,8 @@ function Header() {
         <a href="#beranda" className="active">
           Beranda
         </a>
+        <a href="#brand">Cek brand</a>
         <a href="#tentang">Tentang Kami</a>
-        <a href="#kontak">Kontak</a>
       </div>
     </header>
   );
