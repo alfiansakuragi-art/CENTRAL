@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react";
-import { getApi } from "../../services/api";
+import { useState } from "react";
+import { brand } from "../data/brand";
 
 function Brand() {
-  const [brand, setBrand] = useState([]);
   const [selectedBrand, setSelectedBrand] = useState(null);
   const handleChange = (e) => {
     const value = e.target.value;
@@ -12,14 +11,11 @@ function Brand() {
     selectedBrand === null
       ? []
       : brand.filter((item) =>
-        item.name
+        item
           .toLocaleLowerCase()
           .includes(selectedBrand.toLocaleLowerCase()),
       );
 
-  useEffect(() => {
-    getApi("https://6a637088b30b52361e1a4b30.mockapi.io/BRAND/BRAND", setBrand);
-  }, []);
 
   return (
     <section id="brand" className="section brand-section">
@@ -74,14 +70,13 @@ function Brand() {
             {filter.map((item) => (
               <div key={item.id} className="brand-card">
                 <div className="brand-card-top">
-                  <span className="brand-tier-badge">{item.tier || "Official"}</span>
+                  <span className="brand-tier-badge">{"Official"}</span>
                 </div>
                 <div className="brand-card-body">
                   <div className="brand-avatar">
-                    {item.name ? item.name.charAt(0).toUpperCase() : "B"}
+                    {item ? item.charAt(0).toUpperCase() : "B"}
                   </div>
-                  <h3 className="brand-name">{item.name}</h3>
-                  <span className="brand-category">{item.kategori || "Beauty & Care"}</span>
+                  <h3 className="brand-name">{item}</h3>
                 </div>
               </div>
             ))}

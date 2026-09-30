@@ -123,7 +123,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(255, 250, 247, 0.92);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(176, 48, 79, 0.08);
 }
@@ -900,6 +900,158 @@ header {
     line-height: 1.6;
 }
 
+/* ===== Promo Section ===== */
+.promo-section {
+    padding: 24px 0 40px;
+    position: relative;
+}
+
+.promo-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, #ffffff 0%, var(--blush-50) 100%);
+    border: 1px solid rgba(176, 48, 79, 0.12);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 12px 35px rgba(122, 31, 56, 0.08);
+    padding: 36px 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.promo-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--rose-600), var(--gold-500), var(--rose-500));
+}
+
+.promo-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(122, 31, 56, 0.14);
+}
+
+.promo-card-header {
+    margin-bottom: 22px;
+}
+
+.promo-card-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 3.2vw, 30px);
+    color: var(--rose-800);
+    font-weight: 800;
+    margin-bottom: 12px;
+    letter-spacing: .3px;
+    line-height: 1.25;
+}
+
+.promo-card-header p {
+    font-size: 14.5px;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-bottom: 4px;
+}
+
+.promo-card-header p:first-of-type {
+    font-style: italic;
+    color: var(--rose-700);
+    font-weight: 500;
+}
+
+.promo-card-body {
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px dashed rgba(176, 48, 79, 0.2);
+    border-radius: var(--radius-md);
+    padding: 16px 20px;
+    margin-bottom: 24px;
+}
+
+.promo-card-body h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(16px, 2.2vw, 19px);
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+    line-height: 1.35;
+}
+
+.promo-card-body p {
+    font-size: 13.5px;
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+.promo-card-bottom {
+    display: flex;
+    justify-content: center;
+}
+
+.promo-card-bottom .btn-primary {
+    font-size: 14px;
+    padding: 13px 36px;
+    margin: 0;
+    letter-spacing: .3px;
+    box-shadow: 0 8px 22px rgba(176, 48, 79, 0.35);
+}
+
+.promo-card-bottom .btn-primary:hover {
+    box-shadow: 0 12px 28px rgba(176, 48, 79, 0.45);
+}
+
+/* ===== Shopee Section ===== */
+.shopee-promo-card::before {
+    background: linear-gradient(90deg, #ee4d2d, #ff7337, var(--rose-600));
+}
+
+.shopee-card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.shopee-body-logo {
+    width: 130px;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto 12px;
+    border-radius: 0;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.06));
+    transition: transform .3s ease;
+}
+
+.shopee-promo-card:hover .shopee-body-logo {
+    transform: scale(1.06);
+}
+
+.btn-shopee {
+    background: linear-gradient(135deg, #ee4d2d, #ff5722) !important;
+    box-shadow: 0 8px 22px rgba(238, 77, 45, 0.35) !important;
+}
+
+.btn-shopee:hover {
+    background: linear-gradient(135deg, #d73211, #ee4d2d) !important;
+    box-shadow: 0 12px 28px rgba(238, 77, 45, 0.45) !important;
+}
+
+/* ===== Reseller Section ===== */
+.reseller-promo-card::before {
+    background: linear-gradient(90deg, var(--rose-600), var(--rose-700), var(--gold-500));
+}
+
+.btn-reseller {
+    background: linear-gradient(135deg, var(--rose-600), var(--rose-800)) !important;
+    box-shadow: 0 8px 22px rgba(122, 31, 56, 0.35) !important;
+}
+
+.btn-reseller:hover {
+    background: linear-gradient(135deg, var(--rose-700), var(--rose-950)) !important;
+    box-shadow: 0 12px 28px rgba(122, 31, 56, 0.45) !important;
+}
+
 /* ===== Footer ===== */
 footer {
     background: linear-gradient(160deg, var(--rose-800), var(--rose-950));
@@ -1067,6 +1219,18 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+
+.logo-ncp {
+    height: 70px;
+    width: 70px;
+    border: none;
+    border-radius: 50%;
+    border: 2px solid rgba(0, 0, 0, 0.06);
+    object-fit: cover;
+    object-position: center;
+    padding: 10px;
+}
+
 /* ===== Responsive ===== */
 @media (max-width:1024px) {
 
@@ -1164,6 +1328,3 @@ footer {
         display: none;
     }
 }
-
-
-

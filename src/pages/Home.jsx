@@ -1,17 +1,22 @@
 import Header from "../Component/Header";
 import HeroSection from "../Component/HeroSection";
-import Category from "../Component/Category";
-import Benefits from "../Component/Benefits";
 import Footer from "../Component/Footer";
 import Brand from "../Component/Brand";
+import Shopee from "../Component/Shopee";
+import Promo from "../Component/Promo";
+import Reseller from "../Component/Reseller";
+import Listing from "../Component/Listing";
+
 function Home() {
   return (
     <div>
       <Header />
       <HeroSection />
       <Brand />
-      <Benefits />
-      <Category />
+      <Promo />
+      <Shopee />
+      <Reseller />
+      <Listing />
       <Footer />
     </div>
   );
