@@ -108,7 +108,7 @@ function Header() {
         <a href="#shopee">Shopee</a>
         <a href="#reseller">Reseller</a>
         <a href="#listing">Listing</a>
-        <a href="#tentang">Tentang Kami</a>
+        <a href="#kontak">Tentang Kami</a>
       </div>
     </header>
   );

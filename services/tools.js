@@ -4,8 +4,9 @@ export const scroll = (target) => {
     })
 }
 
-export const toWhatsapp = (number, message="halo min") => {
+export const toWhatsapp = (number, message = "halo min") => {
 
     const text = encodeURI(message)
     window.location.href = `https://wa.me/${number}?text=${text}`
 }
+

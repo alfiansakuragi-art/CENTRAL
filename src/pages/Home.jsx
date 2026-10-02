@@ -6,6 +6,9 @@ import Shopee from "../Component/Shopee";
 import Promo from "../Component/Promo";
 import Reseller from "../Component/Reseller";
 import Listing from "../Component/Listing";
+import Review from "../Component/Review";
+import Comment from "../Component/comment";
+import Jastip from "../Component/jastip";
 
 function Home() {
   return (
@@ -17,6 +20,9 @@ function Home() {
       <Shopee />
       <Reseller />
       <Listing />
+      <Jastip />
+      <Review />
+      <Comment />
       <Footer />
     </div>
   );

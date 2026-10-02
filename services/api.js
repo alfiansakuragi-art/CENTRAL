@@ -1,20 +1,27 @@
-const fetchData = (URL) => {
-    return fetch(URL)
-    .then((response) => {
-        if(!response.ok) {
-            throw new Error('request gagal')
+const fetchData = (URL, METHOD, BODY) => {
+    return fetch(URL, {
+        method: METHOD,
+        body: {
+            name: BODY.name,
+            noHp: BODY.noHp,
+            review: BODY.review
         }
-        return response.json()
     })
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error('request gagal')
+            }
+            return response.json()
+        })
 
-    .then((data) => {
-        return data
-    })
+        .then((data) => {
+            return data
+        })
 }
 
- export const getApi = (URL, state) => {
+export const getApi = (URL, state) => {
     fetchData(URL)
-    .then((data) => {
-        state(data)
-    })
+        .then((data) => {
+            state(data)
+        })
 }
