@@ -37,7 +37,7 @@ function HeroSection() {
             </h1>
             <p>
               Belanja kosmetik grosir dengan harga terbaik, kualitas original, dan
-              pengiriman cepat ke seluruh Indonesia. Cocok untuk reseller maupun
+              pengiriman cepat. Cocok untuk reseller maupun
               pemakaian pribadi.
             </p>
           </div>

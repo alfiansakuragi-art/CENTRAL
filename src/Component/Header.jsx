@@ -68,6 +68,15 @@ function Header() {
           </a>
           <a
             onClick={() => {
+              scroll("jastip");
+              setChoose("jastip")
+            }}
+            className={choose === "jastip" ? "active" : ""}
+          >
+            Jastip
+          </a>
+          <a
+            onClick={() => {
               scroll("kontak");
               setChoose("kontak")
             }}
@@ -79,12 +88,12 @@ function Header() {
         <div className="nav-right">
           <a
             onClick={() => {
-              toWhatsapp("085396592892");
+              scroll("review");
             }}
             className="btn btn-primary"
             id="action-btn-shoop"
           >
-            Chat admin
+            Comment / Review?
           </a>
           <button
             className="hamburger"
@@ -108,6 +117,8 @@ function Header() {
         <a href="#shopee">Shopee</a>
         <a href="#reseller">Reseller</a>
         <a href="#listing">Listing</a>
+        <a href="#jastip">Jastip</a>
+        <a href="#review">Review</a>
         <a href="#kontak">Tentang Kami</a>
       </div>
     </header>
