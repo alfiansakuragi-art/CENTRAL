@@ -7,8 +7,8 @@ import Promo from "../Component/Promo";
 import Reseller from "../Component/Reseller";
 import Listing from "../Component/Listing";
 import Review from "../Component/Review";
-import Comment from "../Component/comment";
-import Jastip from "../Component/jastip";
+import Comment from "../Component/Comment";
+import Jastip from "../Component/Jastip";
 
 function Home() {
   return (
